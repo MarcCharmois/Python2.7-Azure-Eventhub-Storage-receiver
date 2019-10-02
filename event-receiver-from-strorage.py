@@ -13,38 +13,40 @@ def processBlob(filename):
     readingNb = 0
     for reading in reader:
         readingNb +=1
-        parsed_json = json.loads(reading["Body"])
-        #print parsed_json 
-        print "-----------------------------"
-        print "id:"
-        print parsed_json[0]["id"]
-        #print parsed_json[0]
-        if not 'id' in parsed_json[0]:
-            print "no id found..."
-            return
-        if not dict.has_key(parsed_json[0]['id']):
-            list = [parsed_json[0]]
-            dict[parsed_json[0]['id']] = list
-        else:
-            list = dict[parsed_json[0]['id']]
-            list.append(parsed_json[0])
-        print "id:"
-        print dict[parsed_json[0]['id']][0]["id"]   
-        print "eventTime:"
-        print dict[parsed_json[0]['id']][0]["eventTime"]  
-        print "eventType:"
-        print dict[parsed_json[0]['id']][0]["eventType"]  
-        print "resourceUri:"
-        print dict[parsed_json[0]['id']][0]["data"]["resourceUri"]
-        print "operationName:"
-        print dict[parsed_json[0]['id']][0]["data"]["operationName"] 
-        print "resourceProvider:"
-        print dict[parsed_json[0]['id']][0]["data"]["resourceProvider"]   
-        print "status:"
-        print dict[parsed_json[0]['id']][0]["data"]["status"]  
-        print "subject:"
-        print dict[parsed_json[0]['id']][0]["subject"]  
-
+        try:
+            parsed_json = json.loads(reading["Body"])
+            #print parsed_json 
+            print "-----------------------------"
+            print "id:"
+            print parsed_json[0]["id"]
+            #print parsed_json[0]
+            if not 'id' in parsed_json[0]:
+                print "no id found..."
+                return
+            if not dict.has_key(parsed_json[0]['id']):
+                list = [parsed_json[0]]
+                dict[parsed_json[0]['id']] = list
+            else:
+                list = dict[parsed_json[0]['id']]
+                list.append(parsed_json[0])
+            print "id:"
+            print dict[parsed_json[0]['id']][0]["id"]   
+            print "eventTime:"
+            print dict[parsed_json[0]['id']][0]["eventTime"]  
+            print "eventType:"
+            print dict[parsed_json[0]['id']][0]["eventType"]  
+            print "resourceUri:"
+            print dict[parsed_json[0]['id']][0]["data"]["resourceUri"]
+            print "operationName:"
+            print dict[parsed_json[0]['id']][0]["data"]["operationName"] 
+            print "resourceProvider:"
+            print dict[parsed_json[0]['id']][0]["data"]["resourceProvider"]   
+            print "status:"
+            print dict[parsed_json[0]['id']][0]["data"]["status"]  
+            print "subject:"
+            print dict[parsed_json[0]['id']][0]["subject"]  
+        except:
+            print "exception in converting blob to json"
     reader.close()
     print readingNb
     '''
