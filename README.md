@@ -16,4 +16,4 @@ Create a Python virtual Env for Python 2.7
 pip install avro   
 pip install azure.storage   
 Add a storageconfig.py file   
-Set 3 varaiales in this file : storageAccountName, storageAccountKey, storageContainerName
+Set 3 variables in this file : storageAccountName, storageAccountKey, storageContainerName
