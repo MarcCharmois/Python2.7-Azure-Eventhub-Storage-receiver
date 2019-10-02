@@ -5,6 +5,7 @@ import avro.schema
 from avro.datafile import DataFileReader, DataFileWriter
 from avro.io import DatumReader, DatumWriter
 from azure.storage.blob import BlockBlobService
+import storageconfig as cfg
 
 def processBlob(filename):
     reader = DataFileReader(open(filename, 'rb'), DatumReader())
@@ -70,4 +71,4 @@ def startProcessing(accountName, key, container):
         block_blob_service.delete_blob(container, blob.name)
     print "blob nb:"
     print blobNb
-startProcessing('tutorialsstorage', 'VYlJjl3+LoPNNG+MuNjSVH7N3wbEVEppm0hUrU+Qhuam39Lv3ybvrx77H1j8HqfhlAy2QzzBstZSfo7HZTSlIg==', 'events')
+startProcessing(cfg.storageAccountName, cfg.storageAccountKey, cfg.storageContainerName)

@@ -4,6 +4,10 @@
 # Edit at https://www.gitignore.io/?templates=visualstudiocode,windows,python
 
 ### Python ###
+# Security
+*.txt
+*.config
+*config.py
 # Byte-compiled / optimized / DLL files
 *.config
 __pycache__/
