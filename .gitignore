@@ -5,6 +5,7 @@
 
 ### Python ###
 # Security
+*.json
 *.txt
 *.config
 *config.py
