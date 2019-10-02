@@ -5,7 +5,7 @@ get captures from Azure Event Hub stored in Storage Blob
 
 ## How to use
 ### Azure configuration
-Create an Azure Event Hub (choose satndard sku for enabling capture)
+Create an Azure Event Hub (choose standard sku for enabling capture)   
 Create an Azure Storage Account if needed   
 Create a blob container in the Storage Account if needed   
 Set the capture to post event to the container  
