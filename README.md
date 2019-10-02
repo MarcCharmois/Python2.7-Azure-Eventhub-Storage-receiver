@@ -8,7 +8,7 @@ Gets the events of an Azure Event Hub stored in Storage Blob
 Create an Azure Event Hub (choose standard sku for enabling capture)   
 Create an Azure Storage Account if needed   
 Create a blob container in the Storage Account if needed   
-Set the capture in the Event Hub to post event to the Storage Blob Container  
+Set the capture in the Event Hub to post events to the Storage Blob Container  
 
 ### Local configuration
 Download or clone this repo   
