@@ -1,7 +1,8 @@
 # Python2.7 Event Hub Events Storage Receiver
 
 ## Description 
-Gets the events of an Azure Event Hub stored in Storage Blob
+Gets the events of an Azure Event Hub captured and stored in Storage Blob   
+This a rework of the <a href="https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-capture-python">original Microsoft version: Read captured data from Python app - Azure Event Hubs | Microsoft Docs</a>
 
 ## How to use
 ### Azure configuration
